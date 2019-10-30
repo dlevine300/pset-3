@@ -5,22 +5,26 @@ const MAX = 0.99;
 
 const amount = Number(readlineSync.question("\nEnter a dollar amount: "));
 
-const Q =0.25;
-const D =0.10;
-const N =0.05;
-const P =0.01;
+const Qv =0.25;
+const Dv =0.10;
+const Nv =0.05;
+const Pv =0.01;
 
-const Tqcr = (MAX%Q);
-const Tdcr = (Tqcr%D);
-const Tncr = (Tdcr%N);
-const Tpcr = (Tncr%P);
+const Tqcr = (amount%Qv);
+const Tdcr = (Tqcr%Dv);
+const Tncr = (Tdcr%Nv);
+const Tpcr = (Tncr%Pv);
+
+const Q =Math.floor(amount/Qv);
+const D =Math.floor(Tqcr/Dv);
+const N =Math.floor(Tdcr/Nv);
+const P =Math.ceil(Tncr/Pv);
+
 
 if (Number.isNaN(amount)) {
 console.log('invalid'); // print your error message here
 } else if (amount < MIN || amount > MAX) {
 console.log('invalid');    // print your error message here
 } else {
-    // write your code for making change here
+console.log(Q + ' quarters, ' + D + ' dimes, ' + N + ' nickels, and ' + P + ' pennies.') // write your code for making change here
 }
-
-console.log("d" + Q + D + N + P + "nnn")
