@@ -1,4 +1,4 @@
-const readlineSync = require("readline-sync");
+const readlineSync =require("readline-Sync");
 
 const MIN = 0.01;
 const MAX = 0.99;
