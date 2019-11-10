@@ -1,6 +1,6 @@
 const ReadlineSync = require("readline-sync");
 const Temp = Number(ReadlineSync.question("\nEnter a temperature: "));
-const SCALE = String(ReadlineSync.question("\nEnter a scale: "));
+const SCALE = String(ReadlineSync.question("Enter a scale: "));
 
 if (Temp >= 32 || Temp < 212 || SCALE == "F")  {
 	console.log("\nLiquid.\n");
@@ -26,7 +26,7 @@ else if (Temp <= 273 || SCALE == "K" )  {
 	console.log("\nSolid.\n");
 }
 
-if (Temp >= 0 || Temp < 100 && SCALE == "C")  {
+if (Temp >= 0 || Temp < 100 || SCALE == "C")  {
 	console.log("\nLiquid.\n");
 }
 
