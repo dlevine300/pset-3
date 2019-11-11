@@ -15,7 +15,7 @@ else if (Year < MIN || Year > MAX) {
 else if (Year % 400 == 0) {
     console.log("\n" + Year + " is a leap year.");
 }
-else if (Year % 4 == 0 || Year % 100 != 0) {
+else if (Year % 4 == 0 && Year % 100 != 0) {
     console.log("\n" + Year + " is a leap year.");
 }
 else {
